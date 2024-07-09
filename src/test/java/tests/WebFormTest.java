@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import pages.WebFormPage;
 
 
-@Tag("big_form")
+@Tag("form")
 @DisplayName("Тесты для большой формы")
 public class WebFormTest extends WebTestBase {
         WebFormPage webFormPage = new WebFormPage();
@@ -30,7 +30,6 @@ public class WebFormTest extends WebTestBase {
                 .setState(randomData.state)
                 .setCity(randomData.city)
                 .submitClick()
-
                 .checkResult("Student Name", randomData.firstName + " " + randomData.lastName)
                 .checkResult("Student Email", randomData.email)
                 .checkResult("Gender", randomData.gender)
@@ -52,7 +51,6 @@ public class WebFormTest extends WebTestBase {
                 .setUserNumber(randomData.phoneNumber)
                 .setDateOfBirth(randomData.BirthDay, randomData.BirthMonth, randomData.BirthYear)
                 .submitClick()
-
                 .checkResult("Student Name", randomData.firstName + " " + randomData.lastName)
                 .checkResult("Gender", randomData.gender)
                 .checkResult("Mobile", randomData.phoneNumber)
