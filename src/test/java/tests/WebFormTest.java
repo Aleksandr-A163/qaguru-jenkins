@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import pages.WebFormPage;
 
 
-@Tag("form")
+@Tag("big_form")
 @DisplayName("Тесты для большой формы")
 public class WebFormTest extends WebTestBase {
         WebFormPage webFormPage = new WebFormPage();

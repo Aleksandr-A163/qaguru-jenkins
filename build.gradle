@@ -50,8 +50,14 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
-task fullRegistrationTests(type: Test) {
+task TexBoxTests(type: Test) {
     useJUnitPlatform {
         includeTags("form")
+    }
+}
+
+task WebFormTests(type: Test) {
+    useJUnitPlatform {
+        includeTags("big_form")
     }
 }
